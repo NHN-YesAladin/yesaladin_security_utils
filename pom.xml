@@ -8,11 +8,13 @@
     <artifactId>security-utils</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>security-utils</name>
+
     <properties>
         <java.version>11</java.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-    </properties><repositories>
+    </properties>
+    <repositories>
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
@@ -39,11 +41,6 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
             <version>5.7.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.3.25</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
