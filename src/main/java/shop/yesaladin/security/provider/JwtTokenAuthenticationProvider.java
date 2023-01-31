@@ -32,7 +32,7 @@ public class JwtTokenAuthenticationProvider implements AuthenticationProvider {
             HttpHeaders httpHeaders = new HttpHeaders();
             httpHeaders.add("Authorization", token);
 
-            RequestEntity<Void> requestEntity = new RequestEntity<>(
+            RequestEntity<Void> requestEntity = new RequestEntity<Void>(
                     httpHeaders,
                     HttpMethod.GET,
                     URI.create(authUrl + "/authorizations")
@@ -40,7 +40,7 @@ public class JwtTokenAuthenticationProvider implements AuthenticationProvider {
 
             ResponseEntity<ResponseDto<AuthorizationMetaResponseDto>> authorizationMetaEntity = restTemplate.exchange(
                     requestEntity,
-                    new ParameterizedTypeReference<>() {
+                    new ParameterizedTypeReference<ResponseDto<AuthorizationMetaResponseDto>>() {
                     }
             );
 
